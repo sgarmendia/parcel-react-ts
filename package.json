@@ -1,19 +1,21 @@
 {
   "name": "parcel-react",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Light react boilerplate with Parcel and Testing",
-  "main": "index.js",
+  "main": "build/index.html",
   "scripts": {
     "test": "jest --watch",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --out-dir build"
+    "build": "parcel build src/index.html --dist-dir build"
   },
   "jest": {
     "setupFilesAfterEnv": [
-      "<rootDir>/jest-setup.js"
+      "<rootDir>/testSetup/jest-setup.js"
     ],
     "moduleNameMapper": {
-      "^.+\\.(css|less|scss)$": "babel-jest"
+      "^/(.*)$": "<rootDir>/$1",
+      "^.+\\.(css|less|scss)$": "babel-jest",
+      "^.+\\.(jpg|jpeg|png)$": "<rootDir>/testSetup/fileMock.js"
     }
   },
   "keywords": [
@@ -30,16 +32,19 @@
     "scss": "^0.2.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/plugin-proposal-class-properties": "^7.7.0",
-    "@babel/plugin-transform-runtime": "^7.7.4",
-    "@babel/preset-env": "^7.7.1",
-    "@babel/preset-react": "^7.7.0",
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.12.13",
+    "@parcel/transformer-image": "^2.0.0-beta.2",
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "babel-jest": "^26.6.3",
     "cssnano": "^4.1.10",
     "jest": "^26.6.3",
+    "parcel": "^2.0.0-beta.2",
     "sass": "^1.23.7"
   }
 }
