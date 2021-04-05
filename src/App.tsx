@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './scss';
+import './scss/index.scss';
 
 type RFC = () => JSX.Element;
 

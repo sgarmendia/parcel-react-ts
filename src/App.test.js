@@ -10,6 +10,6 @@ describe('App', () => {
 
   it('renders the title', () => {
     const title = getByRole('heading');
-    expect(title).toHaveTextContent('Parcel React boilerplate');
+    expect(title).toHaveTextContent('Typescript React boilerplate');
   });
 });
