@@ -1,10 +1,11 @@
 {
-  "name": "parcel-react",
-  "version": "2.0.0",
-  "description": "Light react boilerplate with Parcel and Testing",
+  "name": "parcel-react-ts",
+  "version": "1.0.0",
+  "description": "react boilerplate with Parcel, Typescript and Testing",
   "main": "build/index.html",
   "scripts": {
     "test": "jest --watch",
+    "lint": "eslint --ext ts,tsx src",
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html --dist-dir build"
   },
@@ -21,30 +22,24 @@
   "keywords": [
     "react",
     "parcel",
+    "jest",
+    "typescript",
     "boilerplate"
   ],
   "author": "SG",
   "license": "ISC",
   "dependencies": {
-    "@babel/runtime": "^7.7.4",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "scss": "^0.2.4"
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.10",
-    "@babel/plugin-proposal-class-properties": "^7.13.0",
-    "@babel/plugin-transform-runtime": "^7.13.10",
-    "@babel/preset-env": "^7.13.12",
-    "@babel/preset-react": "^7.12.13",
-    "@parcel/transformer-image": "^2.0.0-beta.2",
-    "@parcel/transformer-sass": "^2.0.0-beta.2",
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "babel-jest": "^26.6.3",
-    "cssnano": "^4.1.10",
-    "jest": "^26.6.3",
-    "parcel": "^2.0.0-beta.2",
-    "sass": "^1.23.7"
+    "@babel/core": "^7.13.14",
+    "@babel/plugin-transform-typescript": "^7.13.0",
+    "@babel/preset-react": "^7.13.13",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.8",
+    "typescript": "^4.2.3"
   }
 }
